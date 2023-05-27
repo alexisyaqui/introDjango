@@ -1,0 +1,17 @@
+{% extends 'Base.html' %}
+
+{% block titulo %} Crear Blog{% endblock %}
+
+
+{% block contenido %}
+
+<form method="POST">
+    {% CSRF_TOKEN %}
+    titulo{{form.titulo}}
+    <br>
+    contenido{{form.contenido}}
+
+    <button type="submit">GUARDAR</button>
+</form>
+
+{% endblock %}
