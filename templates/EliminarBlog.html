@@ -1,0 +1,16 @@
+{% extends 'Base.html' %}
+
+{% block titulo %} Eliminar Blog{% endblock %}
+
+
+{% block contenido %}
+<H1>DESEA ELIMINAR ESTE ELEMENTO?</H1>
+<form method="POST">
+    {% csrf_token %}
+{{form}}
+
+    <button type="submit">Eliminar</button>
+</form>
+
+
+{% endblock %}

@@ -42,6 +42,7 @@
 
 
 => creamos nuestro modelo en el archivo models.py de nuestra app blog
+    
 
 
 

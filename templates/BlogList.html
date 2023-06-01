@@ -4,25 +4,21 @@
 
 
 {% block contenido %}
-<div class="container">
-    <div class="table">
-        <h1>LISTADO DEL BLOG</h1>
-        <table class="table">
-            <tr>
-                <th>No.</th>
-                <th>Titulo</th>
-                <th>Contenido</th>
-            </tr>
+bloglista
+<br>
 
-            <tbody>
-                {% for c in form %}
-                <th>{form.titulo}</th>
-            </tbody>
+{% for listaPost in posts %}
 
-                {% endfor %}
-        </table>
+<hr>
+<a href="{% url 'blog:detalleblog' listaPost.id %}">{{listaPost.titulo}}</a>
 
-    </div>
+<a href="{% url 'blog:editarblog' listaPost.id %}">EDTAR</a>
 
-</div>
+<a href="{% url 'blog:eliminar' listaPost.id %}">ELIMINAR</a>
+
+
+
+{% endfor %}
+
+<a href="{% url 'blog:crearblog' %}">CREAR</a>
 {% endblock %}

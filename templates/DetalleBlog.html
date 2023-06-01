@@ -1,0 +1,14 @@
+{% extends "Base.html" %}
+
+{% block titulo %} Detalle del Blog {% endblock %}
+
+
+{% block contenido %}
+{{listaPost.titulo}}
+<br>
+{{listaPost.exceprt}}
+<br>
+{{listaPost.contenido}}
+
+
+{% endblock %}

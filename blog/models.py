@@ -11,6 +11,6 @@ class Post(models.Model):
         verbose_name_plural = 'Posts'
         ordering = ['id']
     
-    def __str__(self) -> str:
+    def __str__(self):
         return self.titulo + self.contenido
     
