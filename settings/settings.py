@@ -20,6 +20,14 @@ ALLOWED_HOSTS = ['127.0.0.1']
 
 # Application definition
 
+TAILWIND_APP_NAME='dark'
+
+INTERNAL_IPS = [
+    "127.0.0.1",
+]
+
+NPM_BIN_PATH = '/usr/local/bin/npm'
+
 INSTALLED_APPS = [
     'django.contrib.admin',
     'django.contrib.auth',
@@ -27,8 +35,12 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+
     'settings',
     'blog',
+
+    'tailwind',
+    'dark',
 ]
 
 MIDDLEWARE = [
